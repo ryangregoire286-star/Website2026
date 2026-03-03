@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(20, 45, 65);
+    color: #ccc;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    padding-right: 1.5rem;
+}
+
+header > div h1 {
+
+    padding-left: 10px;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+header li a {
+
+    padding: 19px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    font-weight: 600;
+
+}
+
+div > main h1 {
+    font-size: 1.3rem;
+    padding: 20px;
+    position: relative;
+    top: 200px;
+    text-align: center;
+    font-weight: 900;
+}
+
+
+
+div > main h1 > span {
+    color: rgb(20, 20, 20);
+    font-weight: 700;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper button {
+    background-color: rgb(23, 54, 67);
+    padding: 9px;
+    color: rgb(255, 255, 255);
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    width: 290px;
+    border-radius: 25px;
+    position: relative;
+    top: 240px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.wrapper button:hover {
+    background-color: rgb(10, 43, 46);
+    border: none;
+    outline: none;
+}
+
+header ul li af{
+    color: #ccc;
+}
+
+@media screen and (max-width: 500px) {
+
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header > div h1 {
+        font-size: 1.0rem;
+        font-weight: 900;
+        font-family: sans-serif;
+
+    }
+
+}
+
+@media screen and (max-width: 501px) {
+
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header > div h1 {
+        font-size: 1.0rem;
+        font-weight: 900;
+        font-family: sans-serif;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header > div h1 {
+        font-size: 1.0rem;
+        font-weight: 900;
+        font-family: sans-serif;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header > div h1 {
+        font-size: 1.0rem;
+        font-weight: 900;
+        font-family: sans-serif;
+
+    }
+
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    nav li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header > div h1 {
+        font-size: 1.0rem;
+        font-weight: 900;
+        font-family: sans-serif;
+
+    }
+
+}
