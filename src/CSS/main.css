@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+.header_one li a {
+    color: light-dark(#3F704D, #0B6623);
+}
+
+header li a:nth-child(1) {
+    font-weight: 900;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -27,20 +35,40 @@ header > div h1 {
     padding-left: 10px;
     font-size: 19px;
     text-transform: uppercase;
-    color: black;
+    color: light-dark(#3F704D, #0B6623);
+    font-weight: 900;
+    color-scheme: dark;
 }
 
 li {
     list-style: none;
 }
 
+#buttonLight, #buttonDark{
+    padding: 10px;
+}
+
+#buttonLight {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    color: #101010;
+}
+
+#buttonDark {
+    background-color: #101010;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+
 header li a {
 
     padding: 19px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
-
+    color: light-dark(#3F704D, #0B6623);
     font-weight: 600;
+    color-scheme: light;
 
 }
 
@@ -67,10 +95,18 @@ div > main h1 > span {
     align-items: center;
 }
 
+#main main h1 {
+    color: light-dark(#0B6623, #3F704D);
+    color-scheme: dark;
+}
+
+
+button:hover {
+}
 .wrapper button {
-    background-color: rgb(23, 54, 67);
     padding: 9px;
-    color: rgb(255, 255, 255);
+    background-color: light-dark(#101010, #fff);
+    color: #101010;
     font-family: "Segoe UI", sans-serif;
     font-weight: bold;
     width: 290px;
@@ -80,16 +116,27 @@ div > main h1 > span {
     cursor: pointer;
     border: none;
     outline: none;
+    color-scheme: light dark;
 }
 
 .wrapper button:hover {
-    background-color: rgb(10, 43, 46);
+
+    background-color: light-dark(#101010, #fff);
+    color: white;
     border: none;
     outline: none;
+    color-scheme: light;
 }
 
-header ul li af{
+header ul li a{
     color: #ccc;
+}
+
+header ul li a:hover {
+    color: light-dark(#0B6623, #3F704D);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid #101010;
+    color-scheme: dark;
 }
 
 @media screen and (max-width: 500px) {
