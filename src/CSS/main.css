@@ -44,6 +44,32 @@ li {
     list-style: none;
 }
 
+article > div p {
+
+    position: relative;
+    top: calc(50px * 10);
+    width: calc(50px * 10);
+    padding: 8px;
+    outline: none;
+    background-color: #0B6623;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 3px solid #0B6623;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+
+
+article > div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: calc(20px * 10);
+
+}
+
+
 #buttonLight, #buttonDark{
     padding: 10px;
 }
@@ -53,6 +79,15 @@ li {
     border: none;
     outline: none;
     color: #101010;
+}
+
+#imageSRC {
+    height: 150px;
+    width: 150px;
+}
+
+#QuestionAnswer {
+    text-align: center;
 }
 
 #buttonDark {
@@ -100,6 +135,16 @@ div > main h1 > span {
     color-scheme: dark;
 }
 
+article > footer p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: calc(90px * 10);
+    line-height: 5;
+    text-align: center;
+    font-weight: 900;
+}
 
 button:hover {
 }
@@ -128,6 +173,8 @@ button:hover {
     color-scheme: light;
 }
 
+
+
 header ul li a{
     color: #ccc;
 }
@@ -141,6 +188,10 @@ header ul li a:hover {
 
 @media screen and (max-width: 500px) {
 
+    #main main > h1 {
+        font-size: 20px;
+    }
+
     nav li a {
         font-size: 14px;
         padding: 10px;
@@ -153,14 +204,48 @@ header ul li a:hover {
 
     }
 
+
+    #imageSRC {
+        height: 50px;
+        width: 50px;
+    }
+
+    article {
+        display: flex;
+        justify-content: center;
+    }
+
+    article > div p{
+        display: inline;
+        position: relative;
+        top: calc(50px * 10);
+        width: calc(39px * 10);
+        padding: 8px;
+        /*border: none;*/
+        outline: none;
+        background-color: #0B6623;
+        border-radius: 20px;
+        margin: 0 auto;
+        border: 3px solid #0B6623;
+
+    }
+
+
+
 }
 
 @media screen and (max-width: 501px) {
+
 
     nav li a {
         font-size: 14px;
         padding: 10px;
     }
+
+    #main main > h1 {
+        font-size: 20px;
+    }
+
 
     header > div h1 {
         font-size: 1.0rem;
@@ -178,13 +263,18 @@ header ul li a:hover {
         padding: 10px;
     }
 
+
+
+    #main main > h1 {
+        font-size: 20px;
+    }
+
     header > div h1 {
         font-size: 1.0rem;
         font-weight: 900;
         font-family: sans-serif;
 
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -193,6 +283,11 @@ header ul li a:hover {
         font-size: 14px;
         padding: 10px;
     }
+
+    #main main > h1 {
+        font-size: 20px;
+    }
+
 
     header > div h1 {
         font-size: 1.0rem;
@@ -210,6 +305,19 @@ header ul li a:hover {
         font-size: 14px;
         padding: 10px;
     }
+
+    article > div {
+        display: grid;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+
+    #main main > h1 {
+        font-size: 20px;
+    }
+
 
     header > div h1 {
         font-size: 1.0rem;
