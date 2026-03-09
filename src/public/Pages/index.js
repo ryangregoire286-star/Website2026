@@ -1,4 +1,4 @@
-// import {Connect} from "./DB";
+// import {Connect} from "../../DB";
 
 const button =
     document.getElementById("button");
