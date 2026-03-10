@@ -1,6 +1,6 @@
 import { Server } from "../ServerIncludes/ServerIncludes";
 import express from "express";
-import path from "path";
+import * as path from "path";
 
 const messageFunc = (isRunning: boolean) => {
   return isRunning == true ? "Running" : "Not Running";
@@ -37,7 +37,6 @@ const SetupServer = () => {
     );
   });
 
-  console.log(path.join(__dirname + "./public/Pages/MathRoute/MathRoute.html"));
   const message = client.isRunningServer();
   if (message === true) {
     const messageServer = messageFunc(message);
