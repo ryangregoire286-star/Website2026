@@ -1,3 +1,5 @@
+import { exit } from "process";
+
 interface IRand {
   randNum: (num1: number) => number;
 }
@@ -15,19 +17,24 @@ interface IMath {
   divNumbers: (num1: number, num2: number) => number;
 }
 class MathFunctions implements IMath {
-  addNumbers(num1: number, num2: number) {
+  public addNumbers(num1: number, num2: number) {
     return num1 + num2;
   }
 
-  subNumbers(num1: number, num2: number) {
+  public subNumbers(num1: number, num2: number) {
     return num1 + num2;
   }
 
-  mulNumbers(num1: number, num2: number) {
+  public mulNumbers(num1: number, num2: number) {
     return num1 * num2;
   }
 
-  divNumbers(num1: number, num2: number) {
+  public divNumbers(num1: number, num2: number): number {
+    if (num2 === 0) {
+      console.log("Cannot Divide by Zero");
+      exit(0);
+    }
+
     return num1 / num2;
   }
 }
