@@ -29,6 +29,7 @@ const SetupServer = () => {
   const app = express();
   const PORT = 5000;
   app.use(express.static("./public/Pages"));
+  app.use(express.static("./public/Pages/TodosList/html"))
 
   const client = new Server(PORT);
   const port = client.isRunning();
@@ -43,6 +44,12 @@ const SetupServer = () => {
     );
   });
 
+  app.get(todosRoute.toString(), (_req, res) => {
+    res.sendFile(
+        path.join(__dirname, "/public/Pages/TodosList/html/Todos.html"),
+    );
+  });
+
   const message = client.isRunningServer();
   if (message) {
     const messageServer = messageFunc(message);
@@ -52,11 +59,6 @@ const SetupServer = () => {
     });
   }
 
-  app.get(todosRoute.toString(), (_req, res) => {
-    res.sendFile(
-        path.join(__dirname, "/public/Pages/TodosList/TodoList.html"),
-    );
-  });
 };
 
 
