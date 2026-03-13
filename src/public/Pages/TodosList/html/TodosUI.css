@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: sans-serif;
+}
+
+:root {
+    --bg: rgb(23, 54, 67);
+    --flex: flex;
+    --center: space-between;
+}
+
+header {
+    padding: 20px;
+    background-color: var(--bg);
+    display: var(--flex);
+    justify-content: var(--center);
+}
+
+header li a {
+    font-family: sans-serif;
+}
+
