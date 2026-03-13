@@ -11,8 +11,12 @@ body {
 
 :root {
     --bg: rgb(23, 54, 67);
+    --colorX: rgb(10, 10, 10);
     --flex: flex;
     --center: space-between;
+    --centerX: center;
+    --X: 20px;
+    --width: 600px / 3;
 }
 
 header {
@@ -22,7 +26,70 @@ header {
     justify-content: var(--center);
 }
 
-header li a {
-    font-family: sans-serif;
+li {
+    list-style-type: none;
 }
 
+header li a {
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 9px;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+header li a:hover {
+    border-bottom: 3px solid rgb(10, 10, 10);
+}
+
+.container {
+    display: var(--flex);
+    justify-content: var(--centerX);
+}
+
+.container > a {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wrapper > h1 {
+    display: var(--flex);
+    justify-content: var(--centerX);
+    position: relative;
+    top: calc(var(--X) * 10);
+    font-size: calc(var(--X) * 1.3);
+    color: var(--colorX);
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.contain {
+    display: var(--flex);
+    justify-content: var(--centerX);
+    margin: 0 auto;
+}
+
+.contain > label > input {
+    position: relative;
+    top: calc(var(--X) * 12);
+    width: calc(var(--width) * 1.8);
+    padding: 10px;
+    outline: none;
+}
+
+button {
+
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: calc(var(--width) * 1.4);
+    position: relative;
+    top: calc(var(--X) * 14);
+    color: rgb(255, 255, 255);
+    background-color: rgb(10, 10, 10);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}

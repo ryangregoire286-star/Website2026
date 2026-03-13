@@ -7,17 +7,25 @@ html(lang='en')
 
     body
         header
-            div
-                a
+            div(class="container")
+                a Todo-List
             nav
                 ul
                     li
-                        a Home
-                        a About
-                        a Contact
+                        a(href="/") Home
+                        a(href="/About") About
+                        a(href="/Contact") Contact
 
-    h1 Welcome to Todos Page
+    div(class="wrapper")
+        h1 Welcome to Todos Page
 
-    label
-        input
+    div(class="contain")
+        label
+            input(placeholder="Enter Todo 1: ")
+            <br/>
+            <br/>
+            <br/>
+            input(placeholder="Enter Todo 2: ")
+
+    button Click Me
 
