@@ -1,9 +1,14 @@
-import {GenerateRGB} from "../../ColorStuff/GenerateRGBColorLength";
-import {SIZE_Y} from "../../ColorStuff/SIZE_Number";
+const GenerateRGB = (r) => {
+    return Math.floor(Math.random() * r);
+}
 
-for(const BUTTON_X of document.querySelectorAll("#buttonX")) {
+const SIZE_Y = 254 + 1;
 
-    BUTTON_X.addEventListener("click", () => {
+const BUTTON_X = document.querySelectorAll("#buttonX")
+
+BUTTON_X.forEach(e => {
+
+    e.addEventListener("click", () => {
 
         const colorGenR = GenerateRGB(SIZE_Y);
         const colorGenG = GenerateRGB(SIZE_Y);
@@ -15,5 +20,5 @@ for(const BUTTON_X of document.querySelectorAll("#buttonX")) {
 
         });
 
-    })
-}
+    });
+});
