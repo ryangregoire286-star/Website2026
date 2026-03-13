@@ -7,7 +7,7 @@ const messageFunc = (isRunning: boolean) => {
 };
 
 enum PickedRoute {
-  // ABOUT,
+  RGBColor,
   OTHER,
   TODOS
 }
@@ -22,6 +22,11 @@ const URLCreate = (url: PickedRoute) => {
     return "/Todos";
   }
 
+  if (url == PickedRoute.RGBColor) {
+
+    return "/RGBConvert";
+  }
+
   return url;
 };
 
@@ -30,6 +35,7 @@ const SetupServer = () => {
   const PORT = 5000;
   app.use(express.static("./public/Pages"));
   app.use(express.static("./public/Pages/TodosList/html"))
+  app.use(express.static("/public/Pages/RGB/"))
 
   const client = new Server(PORT);
   const port = client.isRunning();
@@ -37,6 +43,7 @@ const SetupServer = () => {
   const URLsCreate = URLCreate(PickedRoute.OTHER);
   // const AboutPageURL = URLCreate(PickedRoute.ABOUT);
   const todosRoute = URLCreate(PickedRoute.TODOS);
+  const rgbConverter = URLCreate(PickedRoute.RGBColor);
 
   app.get(URLsCreate.toString(), (_req, res) => {
     res.sendFile(
@@ -47,6 +54,12 @@ const SetupServer = () => {
   app.get(todosRoute.toString(), (_req, res) => {
     res.sendFile(
         path.join(__dirname, "/public/Pages/TodosList/html/Todos.html"),
+    );
+  });
+
+  app.get(rgbConverter.toString(), (_req, res) => {
+    res.sendFile(
+        path.join(__dirname, "/public/Pages/RandomRGB/RGB/RGBPage.html"),
     );
   });
 
