@@ -2,6 +2,7 @@ import { Server } from "../ServerIncludes/ServerIncludes";
 import express from "express";
 import * as path from "path";
 
+const __dirname = path.resolve();
 const messageFunc = (isRunning: boolean) => {
   return isRunning ? "Running" : "Not Running";
 };
@@ -35,7 +36,7 @@ const SetupServer = () => {
   const PORT = 5000;
   app.use(express.static("./public/Pages"));
   app.use(express.static("./public/Pages/TodosList/html"))
-  app.use(express.static("/public/Pages/RGB/"))
+  // app.use(express.static("/public/Pages/RandomRGB"))
 
   const client = new Server(PORT);
   const port = client.isRunning();
