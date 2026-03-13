@@ -1,12 +1,25 @@
 doctype html
-html
+html(lang='en')
     head
+        link(rel="stylesheet", href="RGBCSS/RGBColor.css")
         title "Ryan James | RGB Converter"
 
     body
 
+        header
+            div
+                a(href="/") RGBConverter
+            nav
+                ul
+                    li
+
+                        a(href="/") Home
+                        a(href="/About") About
+                        a(href="/Contact") Contact
+
+
         div(class="container")
 
-            p Welcome to RGB Converter | Generator
-
-            button Generate Color
+            section
+                p Welcome to RGB Converter | Generator
+                button Generate Color

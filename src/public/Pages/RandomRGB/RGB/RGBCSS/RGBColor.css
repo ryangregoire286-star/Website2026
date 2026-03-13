@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --flex: flex;
+    --between: space-between;
+    --centerY: center;
+}
+
+header {
+    display: var(--flex);
+    justify-content: var(--between);
+    background-color: rgb(23, 90, 87);
+    padding: 20px;
+}
+
+header > div a {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    padding: 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+
+
+.container {
+    display: var(--flex);
+    justify-content: var(--centerY);
+
+}
