@@ -1,17 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Server = void 0;
-var Server = /** @class */ (function () {
-    function Server(ports) {
+class Server {
+    ports;
+    port;
+    constructor(ports) {
         this.ports = ports;
         this.port = ports;
     }
-    Server.prototype.isRunning = function () {
+    isRunning() {
         return this.port;
-    };
-    Server.prototype.isRunningServer = function () {
+    }
+    isRunningServer() {
         return true;
-    };
-    return Server;
-}());
+    }
+}
 exports.Server = Server;

@@ -1,66 +1,67 @@
-var Random_Num = /** @class */ (function () {
-    function Random_Num() {
-    }
-    Random_Num.prototype.randNum = function (num1) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const process_1 = require("process");
+class Random_Num {
+    randNum(num1) {
         return Math.floor(Math.random() * num1);
-    };
-    return Random_Num;
-}());
-var MathFunctions = /** @class */ (function () {
-    function MathFunctions() {
     }
-    MathFunctions.prototype.addNumbers = function (num1, num2) {
+}
+class MathFunctions {
+    addNumbers(num1, num2) {
         return num1 + num2;
-    };
-    MathFunctions.prototype.subNumbers = function (num1, num2) {
+    }
+    subNumbers(num1, num2) {
         return num1 + num2;
-    };
-    MathFunctions.prototype.mulNumbers = function (num1, num2) {
+    }
+    mulNumbers(num1, num2) {
         return num1 * num2;
-    };
-    MathFunctions.prototype.divNumbers = function (num1, num2) {
+    }
+    divNumbers(num1, num2) {
+        if (num2 === 0) {
+            console.log("Cannot Divide by Zero");
+            (0, process_1.exit)(0);
+        }
         return num1 / num2;
-    };
-    return MathFunctions;
-}());
-var elAdd = document.getElementById("addNum");
-var elSub = document.getElementById("subNum");
-var elMul = document.getElementById("mulNum");
-var elDiv = document.getElementById("divNum");
-var pro = document.getElementById("problem");
-elAdd.addEventListener("click", function (e) {
-    var Rand = new Random_Num();
-    var number_1 = Rand.randNum(5);
-    var number_2 = Rand.randNum(10);
-    var funcs = new MathFunctions();
-    var addFunction = funcs.addNumbers(number_1, number_2);
-    pro.textContent = "".concat(number_1, " + ").concat(number_2, " = ").concat(addFunction);
+    }
+}
+const elAdd = document.getElementById("addNum");
+const elSub = document.getElementById("subNum");
+const elMul = document.getElementById("mulNum");
+const elDiv = document.getElementById("divNum");
+const pro = document.getElementById("problem");
+elAdd.addEventListener("click", (e) => {
+    const Rand = new Random_Num();
+    const number_1 = Rand.randNum(5);
+    const number_2 = Rand.randNum(10);
+    const funcs = new MathFunctions();
+    const addFunction = funcs.addNumbers(number_1, number_2);
+    pro.textContent = `${number_1} + ${number_2} = ${addFunction}`;
     e.preventDefault();
 });
-elSub.addEventListener("click", function (e) {
-    var Rand = new Random_Num();
-    var number_1 = Rand.randNum(5);
-    var number_2 = Rand.randNum(10);
-    var funcs = new MathFunctions();
-    var subFunction = funcs.subNumbers(number_1, number_2);
-    pro.textContent = "".concat(number_1, " - ").concat(number_2, " = ").concat(subFunction);
+elSub.addEventListener("click", (e) => {
+    const Rand = new Random_Num();
+    const number_1 = Rand.randNum(5);
+    const number_2 = Rand.randNum(10);
+    const funcs = new MathFunctions();
+    const subFunction = funcs.subNumbers(number_1, number_2);
+    pro.textContent = `${number_1} - ${number_2} = ${subFunction}`;
     e.preventDefault();
 });
-elMul.addEventListener("click", function (e) {
-    var Rand = new Random_Num();
-    var number_1 = Rand.randNum(5);
-    var number_2 = Rand.randNum(10);
-    var funcs = new MathFunctions();
-    var mulFunction = funcs.mulNumbers(number_1, number_2);
-    pro.textContent = "".concat(number_1, " * ").concat(number_2, " = ").concat(mulFunction);
+elMul.addEventListener("click", (e) => {
+    const Rand = new Random_Num();
+    const number_1 = Rand.randNum(5);
+    const number_2 = Rand.randNum(10);
+    const funcs = new MathFunctions();
+    const mulFunction = funcs.mulNumbers(number_1, number_2);
+    pro.textContent = `${number_1} * ${number_2} = ${mulFunction}`;
     e.preventDefault();
 });
-elDiv.addEventListener("click", function (e) {
-    var Rand = new Random_Num();
-    var number_1 = Rand.randNum(5);
-    var number_2 = Rand.randNum(10);
-    var funcs = new MathFunctions();
-    var divFunction = funcs.divNumbers(number_1, number_2);
-    pro.textContent = "".concat(number_1, " / ").concat(number_2, " = ").concat(divFunction);
+elDiv.addEventListener("click", (e) => {
+    const Rand = new Random_Num();
+    const number_1 = Rand.randNum(5);
+    const number_2 = Rand.randNum(10);
+    const funcs = new MathFunctions();
+    const divFunction = funcs.divNumbers(number_1, number_2);
+    pro.textContent = `${number_1} / ${number_2} = ${divFunction}`;
     e.preventDefault();
 });

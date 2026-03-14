@@ -1,3 +1,4 @@
+"use strict";
 // import {MongoClient} from "mongodb";
 //
 // const GetURL = () => {
